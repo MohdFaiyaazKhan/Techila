@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #15f4ee;
+    }
+
+    button {
+      background-color: rgb(41, 41, 194);
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="btn" onclick="add()">Add</button>
+<br>
+<br>
+  <table id="myTable">
+    <tr>
+      <th>Sr No.</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    <tbody id="tableBody">
+    </tbody>
+  </table>
+
+  <script>
+
+    const array = [{ sr: "1", name: "abc", mail: "abc@gmail.com" }, { sr: "2", name: "mno", mail: "mno@gmail.com" }, { sr: "3", name: "xyz", mail: "xyz@gmail.com" }]
+
+    let i = 0;
+
+    function add() {
+      if (i >= array.length) {
+        alert("No more objects to add.");
+        return;
+      }
+
+      let myTable = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+
+      let row = myTable.insertRow();
+      let cell1 = row.insertCell(0);
+      let cell2 = row.insertCell(1);
+      let cell3 = row.insertCell(2);
+      let cell4 = row.insertCell(3);
+
+      cell1.innerHTML = array[i].sr;
+      cell2.innerHTML = array[i].name;
+      cell3.innerHTML = array[i].mail;
+      cell4.innerHTML = `<button onclick="remove(this)" style="background-color: red">Remove</button>`;
+
+      i++;
+    }
+
+    function remove(button) {
+      let row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+      button.removeAttribute('onclick');
+    }
+
+  </script>
+</body>
+
+</html>

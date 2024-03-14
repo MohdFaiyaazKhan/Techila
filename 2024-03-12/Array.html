@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+
+    <h1>Merging 2 Arrays using Logic</h1>
+    <p>a = [1, 2, 3, [4, 5, 6], 7, 8]</p>
+    <input type="button" onclick="logic()" value="Click Here for Output">
+    <p>Output: </p>
+    <p id="logic"></p>
+
+    <h1>Merging 2 Arrays using Flat function</h1>
+    <p>a = [10, 20, 30, [40, 50, 60], 70, 80]</p>
+    <input type="button" onclick="flat()" value="Click Here for Output">
+    <p>Output: </p>
+    <p id="flat"></p>
+    
+    <script>
+
+        function logic(){
+        let b = [];
+        let c = [];
+        let d = [];
+        let a = [1,2,3,[4,5,6],7,8];
+
+
+        a.forEach((n) => {
+            if(typeof n !== 'object'){
+            b.push(n)
+            }
+            else{
+                c.push(n);
+                n.forEach((n)=>{
+                    b.push(n);
+                })
+            }
+        });
+           
+        console.log(b);
+        document.getElementById('logic').innerHTML = `[${b}]`;
+    
+    }
+
+
+    
+
+    function flat(){
+        const arr = [10,20,30,[40,50,60],70,80];
+        
+        const arr2 = arr.flat();
+        console.log(arr2);
+        
+        document.getElementById('flat').innerHTML = `[${arr2}]`;
+    }
+
+    </script>
+</body>
+</html>

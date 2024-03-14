@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnChange event</title>
+</head>
+<body>
+    <h1>OnChange Event</h1>
+    <label>Input</label><br>
+    <input type="text" id="inputOnChange" onchange="showOnChange()">
+    <br>
+    <label>Output</label><br>
+    <input type="text" id="outputOnChange" placeholder="">
+
+    <h1>OnClick Event</h1>
+    <label>Input</label><br>
+    <input type="text" id="inputOnClick" >
+    <br>
+    <label>Output</label><br>
+    <input type="text" id="outputOnClick" placeholder="">
+    <input type="button" onclick="showOnClick()" value="Click Here">
+    
+
+
+    <script>
+       function showOnChange(){
+        var inputValue = document.getElementById('inputOnChange').value;
+        document.getElementById('outputOnChange').placeholder = inputValue;
+        console.log(inputValue)
+       }     
+       function showOnClick(){
+        var inputValue = document.getElementById('inputOnClick').value;
+        document.getElementById('outputOnClick').placeholder = inputValue;
+        console.log(inputValue)
+       }     
+    </script>
+
+</body>
+</html>

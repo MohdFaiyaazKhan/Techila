@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+
+    <style>
+        body{
+            margin-left: 35vw;
+            margin-top: 50vh;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <input type="number" id="n1" placeholder="Enter No. 1" onchange="calc()" required>
+
+        <select name="operators" id="op" onchange="calc()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+
+        <input type="number" id="n2" placeholder="Enter No. 2" onchange="calc()" required> 
+
+        <input type="number" id="output" placeholder="Output" readonly>
+    </div>
+
+    <script>
+        function calc(){
+        var numberOne = Number(document.getElementById('n1').value);
+        // console.log(numberOne)
+        var operator = document.getElementById('op').value;
+        var numberTwo = Number(document.getElementById('n2').value);
+
+        if(numberOne!= '' && numberTwo!= '' && operator!='' ){
+            
+            if(operator == '+'){
+            let add = numberOne + numberTwo;
+            console.log(add);
+            document.getElementById('output').placeholder = add;
+            } 
+
+            if(operator == '-'){
+            let sub = numberOne - numberTwo;
+            console.log(sub);
+            document.getElementById('output').placeholder = sub;
+            } 
+
+            if(operator == '*'){
+            let mul = numberOne * numberTwo;
+            console.log(mul);
+            document.getElementById('output').placeholder = mul;
+            } 
+
+            if(operator == '/'){
+            let div = numberOne / numberTwo;
+            console.log(div);
+            document.getElementById('output').placeholder = div;
+            } 
+
+        }
+     
+        }
+    </script>
+</body>
+</html>
