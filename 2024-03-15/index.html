@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Task 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outter-wrapper">
+        <nav>
+            <div class="nav">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <select name="numbers" id="numbers">
+                        <option value="" selected disabled hidden>Choose here</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="center"> 
+                <div class="poster">
+                    <img class="img" src="./Hot_Pink10.webp">
+                    <p class="detail">I'm not addicted to ice cream; we're just in a committed relationship!!!</p>
+                    <button class="button-28" role="button">Ice-Cream</button>
+                </div> 
+            </div>
+            <div class="bottom">
+            <div class="chat">
+                <p>"I scream, you scream, we all scream for ice cream!" - Howard Johnson<br><br>
+
+                    "Without ice cream, there would be darkness and chaos." - Don Kardong<br><br>
+                    
+                    "Life is uncertain. Eat dessert first." - Ernestine Ulmer<br><br>
+                    
+                    "Happiness is...eating ice cream on a hot day." - Unknown<br><br>
+                    
+                    "I love you more than ice cream, and that's saying a lot." - Unknown<br><br>
+                    
+                    "Ice cream is the nectar of the gods." - Unknown<br><br>
+                    "Ice cream is a smile in a cone." - Unknown
+
+                    "Ice cream is the ultimate comfort food." - Unknown<br><br>
+                    
+                    "Everything is better with ice cream." - Unknown<br><br>
+                    
+                    "Ice cream is my therapy." - Unknown</p>
+            </div>
+            <div class="circle">
+                <div class="plus" onclick="showAndHide()">
+                    <i class="fa fa-plus" style="font-size:48px;color:#FF0080"></i>
+                </div>
+            </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+     function showAndHide() {
+    let elements = document.getElementsByClassName('chat');
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].style.display === 'block') {
+            elements[i].style.display = 'none';
+        } else {
+            elements[i].style.display = 'block';
+        }
+    }
+    console.log("hi");
+}
+
+    </script>
+</body>
+</html>
