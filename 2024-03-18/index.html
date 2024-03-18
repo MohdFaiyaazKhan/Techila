@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input class="input" type="text" id="fname" name="fname" onblur="valid(0)"><br>
+        <label id="1" style="color: darkred; display: none;">*Field required</label><br><br>
+
+        <label for="lname">Last name:</label><br>
+        <input class="input" type="text" id="lname" name="lname" onblur="valid(1)"><br>
+        <label id="2" style="color: darkred; display: none;">*Field required</label><br><br>
+
+        <label for="lname">Phone No:</label><br>
+        <input class="input" type="text" id="phone" name="phone" onblur="valid(2)"><br>
+        <label id="3" style="color: darkred; display: none;">*Field required</label><br><br>
+
+        <label for="lname">E-mail:</label><br>
+        <input class="input" type="text" id="email" name="email" onblur="valid(3)"><br>
+        <label id="4" style="color: darkred; display: none;">*Field required</label><br><br>
+
+        <input id="btn" type="submit" value="Submit">
+      </form> 
+
+      <script>
+
+
+        function valid(i){
+            if(i === 0){
+                if(document.getElementById('fname').value === ''){
+                document.getElementById('fname').style.borderColor='red';
+                document.getElementById('1').style.display='block';
+            }else{
+                document.getElementById('fname').style.borderColor='black';
+                document.getElementById('1').style.display='none';
+            }
+
+            }else if(i === 1){
+                if(document.getElementById('lname').value === ''){
+                document.getElementById('lname').style.borderColor='red';
+                document.getElementById('2').style.display='block';
+            }else{
+                document.getElementById('lname').style.borderColor='black';
+                document.getElementById('2').style.display='none';
+            }
+
+            }else if(i === 2){
+                if(document.getElementById('phone').value === ''){
+                document.getElementById('phone').style.borderColor='red';
+                document.getElementById('3').style.display='block';
+            }else{
+                document.getElementById('phone').style.borderColor='black';
+                document.getElementById('3').style.display='none';
+            }
+
+            }else if(i === 3){
+                if(document.getElementById('email').value === ''){
+                document.getElementById('email').style.borderColor='red';
+                document.getElementById('4').style.display='block';
+            }else{
+                document.getElementById('email').style.borderColor='black';
+                document.getElementById('4').style.display='none';
+            }
+
+            }
+        }    
+
+
+      </script>
+</body>
+</html>
