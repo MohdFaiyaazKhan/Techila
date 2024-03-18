@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    background-color: #35374B;
+    height: 72vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8%;
+}
+
+.box{
+    padding: 4%;
+    margin: 1%;
+    width: 24vw;
+    height: 2vh;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.box:nth-child(1){
+    background-color: #344955;
+    color: #6682d8;
+}
+
+.box:nth-child(2){
+    background-color: #50727B;
+    color: #e9a527;
+}
+
+.box:nth-child(3){
+    background-color: #78A083;
+    color: #7a0000;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="box">This is .box:nth-child(1)</div>
+            <div class="box">This is .box:nth-child(2)</div>
+            <div class="box">This is .box:nth-child(3)</div>
+            <div class="box">This is default div</div>
+            <!-- <div class="box">This is div 5</div> -->
+        </div>
+    </div>
+</body>
+</html>
