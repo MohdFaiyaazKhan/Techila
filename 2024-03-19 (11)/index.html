@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="wrapper">
+    <div class="container">
+        <div class="header">
+            <div class="line">
+                <hr id="hr">
+            </div>
+            <div class="steps">
+                <div id="step1" class="step">1</div>
+                <div id="step2" class="step">2</div>
+            </div>
+        </div>
+        <div class="main">
+            <form>
+                <div id="form1" class="form1">
+                    <h1>Techila Global Services</h1><br><br>
+
+                    <label class="label">Name: </label><br>
+    
+                    <input type="text" placeholder="Enter your name" id="name" class="input" name="name" onchange="storeData(this)">
+    
+                    <label class="alert" id="nameAlert" style="display: none; color: red;">* Name is required</label><br>
+    
+    
+    
+                    <label class="label">E-mail: </label><br>
+    
+                    <input type="text" placeholder="Enter your email" id="mail" class="input" name="email" onchange="storeData(this)">
+    
+                    <label class="alert" id="mailAlert" style="display: none; color: red;">* E-mail is required</label>
+    
+                    <label id="mailFormatAlert" style="display: none; color: red;">* E-mail is invalid</label><br>
+    
+    
+    
+                    <label class="label">Mobile: </label><br>
+    
+                    <input type="text" placeholder="Enter your mobile number" class="input" id="mobile" name="mobile" onchange="storeData(this)">
+    
+                    <label class="alert" id="mobileAlert" style="display: none; color: red;">* Mobile is required</label>
+    
+                    <label id="mobileFormatAlert" style="display: none; color: red;">* Mobile Number is invalid</label><br>
+    
+    
+    
+                    <label class="label">Amount: </label><br>
+                    <input type="number" placeholder="Enter your amount" class="input" id="amount" step="0.01"
+                        placeholder="0.00" name="amount" onchange="storeData(this)">
+
+                        <label class="alert" id="amountAlert" style="display: none; color: red;">* Amount is required</label><br>
+    
+                    <input id="btn" type="button" value="Next">
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <div id="form2" class="form2">
+                    <h1>Techila Global Services</h1><br><br>
+
+                    <label class="label">House No.: </label><br>
+    
+                    <input type="text" placeholder="Enter your house number" class="input" name="houseNo" onchange="storeData(this)"><br>
+    
+    
+    
+    
+    
+                    <label class="label">District: </label><br>
+    
+                    <input type="text" placeholder="Enter your district" class="input" name="district" onchange="storeData(this)"><br>
+        
+    
+    
+    
+                    <label class="label">State: </label><br>
+    
+                    <input type="text" placeholder="Enter your state" class="input" name="state" onchange="storeData(this)"><br>
+    
+    
+    
+                    <label class="label">Country: </label><br>
+    
+                    <input type="text" placeholder="Enter your country" class="input" name="state" onchange="storeData(this)"><br>
+    
+    
+                    <div class="btns">
+                    <input id="prevBtn" onclick="prev(this)" type="button" value="Prev">
+    
+                    <input id="subBtn" type="button" value="Submit" >
+                    </div>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        var Data = {};
+
+        nameInput = document.getElementById('name');
+        //   console.log(nameInput)
+
+        mailInput = document.getElementById('mail');
+        //   console.log(mailInput)
+
+        mobileInput = document.getElementById('mobile');
+        //   console.log(mobileInput)
+
+        amountInput = document.getElementById('amount');
+        //   console.log(mobileInput)
+
+        btn = document.getElementById('btn');
+
+
+
+        btn.addEventListener("click", () => {
+
+            var flag =0;
+
+            if (nameInput.value.trim() === '') {
+                document.getElementById('nameAlert').style.display = 'block';
+                flag = 1;
+            }
+            if (mailInput.value.trim() === '') {
+                document.getElementById('mailAlert').style.display = 'block';
+                flag = 1;
+            }
+            if (mobileInput.value.trim() === '') {
+                document.getElementById('mobileAlert').style.display = 'block';
+                flag = 1;
+            }
+            if (amountInput.value.trim() === '') {
+                document.getElementById('amountAlert').style.display = 'block';
+                flag = 1;
+            }
+
+            console.log(flag)
+
+            if(flag === 0){
+                document.getElementById('form1').style.display = 'none';
+                document.getElementById('step1').style.backgroundColor = '#f6f1f4';
+                document.getElementById('step1').style.color = '#002244';
+                document.getElementById('form2').style.display = 'block';
+                document.getElementById('step2').style.backgroundColor = '#002244';
+                document.getElementById('step2').style.color = 'white';
+            }
+
+        })
+
+
+
+        function prev(event){
+            document.getElementById('form2').style.display = 'none';
+            document.getElementById('step2').style.backgroundColor = '#f6f1f4';
+            document.getElementById('step2').style.color = '#002244';
+            document.getElementById('form1').style.display = 'block';
+            document.getElementById('step1').style.backgroundColor = '#002244';
+            document.getElementById('step1').style.color = 'white';
+        }
+
+
+
+
+
+        nameInput.addEventListener('blur', ()=>{
+            if(nameInput.value === ''){
+                document.getElementById('nameAlert').style.display = 'block';
+            }else{
+                document.getElementById('nameAlert').style.display = 'none';
+            }
+        })
+
+
+
+        mailInput.addEventListener('blur', ()=>{
+            if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mailInput.value)){
+
+                document.getElementById('mailFormatAlert').style.display = 'none'
+            }
+            else{
+                document.getElementById('mailFormatAlert').style.display = 'block'
+            }
+
+            if(mailInput.value === ''){
+                document.getElementById('mailAlert').style.display = 'block';
+                document.getElementById('mailFormatAlert').style.display = 'none'
+            }else{
+                document.getElementById('mailAlert').style.display = 'none';
+            }
+
+        })
+
+
+
+        mobileInput.addEventListener('blur', ()=>{
+            if(/^(0|91)?[6-9][0-9]{9}$/.test(mobileInput.value)){
+                
+                document.getElementById('mobileFormatAlert').style.display = 'none';
+                
+            }
+            else{
+                document.getElementById('mobileFormatAlert').style.display = 'block'
+            }
+
+            if(mobileInput.value === ''){
+                document.getElementById('mobileAlert').style.display = 'block';
+                document.getElementById('mobileFormatAlert').style.display = 'none'
+            }else{
+                document.getElementById('mobileAlert').style.display = 'none';
+            }
+        })
+
+
+
+        amountInput.addEventListener('blur', ()=>{
+            if(nameInput.value === ''){
+                document.getElementById('amountAlert').style.display = 'block';
+            }else{
+                document.getElementById('amountAlert').style.display = 'none';
+            }
+        })
+
+
+
+
+        function storeData(event){
+            // console.log(event.value)
+            // console.log(event.name)
+            Data[event.name] = event.value;
+            console.log(Data)
+        }
+
+        // console.log(Data)
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,14 +1,3 @@
-        
-        // function show(i) {
-        //     if (document.getElementsByClassName('desc')[i].style.display === 'block') {
-        //         document.getElementsByClassName('desc')[i].style.display = 'none';
-        //         console.log("1");
-        //     } else {
-        //         document.getElementsByClassName('desc')[i].style.display = 'block';
-        //         console.log("2")
-        //     }
-        // }
-
 
 
         function show(i) {
