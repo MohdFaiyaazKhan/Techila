@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="space">
+            <div id="list1" class="list" onclick="showModal(event)">
+                <div class="heading">
+                    <h1>Heading 1</h1>
+                    <p>&darr;</p>
+                </div>
+                <div id="desc1" class="desc">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus quidem quia pariatur amet earum
+                        saepe voluptatem molestias quaerat iusto minima!</p>
+                    <button id="btn1" onclick="openNext(event)">Next</button>
+                </div>
+            </div>
+            <div id="list2" class="list" onclick="showModal(event)">
+                <div class="heading">
+                    <h1>Heading 2</h1>
+                    <p>&darr;</p>
+                </div>
+                <div id="desc2" class="desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim harum, error quisquam similique
+                        veritatis quis velit.</p>
+                    <button id="btn2" onclick="openNext(event)">Next</button>
+                </div>
+            </div>
+            <div id="list3" class="list" onclick="showModal(event)">
+                <div class="heading">
+                    <h1>Heading 3</h1>
+                    <p>&darr;</p>
+                </div>
+                <div id="desc3" class="desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, cupiditate inventore debitis
+                        excepturi sit dignissimos ex!</p>
+                    <button>Finish</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+        var a = 1;
+        var b = 0;
+        var c = 0;
+
+
+
+        function showModal(event){
+            desc = event.target.parentNode.nextElementSibling;
+
+            if(desc.id === 'desc1' && a === 1){
+                document.getElementById('desc1').style.display = 'block'
+            }
+            else{
+                document.getElementById('desc1').style.display = 'none'
+            }
+
+            if(desc.id === 'desc2' && b === 1){
+                document.getElementById('desc2').style.display = 'block'
+            }
+            else{
+                document.getElementById('desc2').style.display = 'none'
+            }
+
+            if(desc.id === 'desc3' && c === 1){
+                document.getElementById('desc3').style.display = 'block'
+            }
+            else{
+                document.getElementById('desc3').style.display = 'none'
+            }
+        }
+
+
+
+        function openNext(event){
+            console.log(event.target)
+            btnId = event.target.id;
+            console.log(btnId)
+
+            if(btnId === 'btn1'){
+                a = 1;
+                b = 1;
+            }
+
+            if(btnId === 'btn2'){
+                a = 1;
+                b = 1;
+                c = 1;
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

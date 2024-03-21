@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13</title>
+
+    <style>
+        p {
+            display: none;
+        }
+
+        h1 {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <h1 onclick="show(event)">Heading 1</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id ea nihil ducimus tempore?</p>
+
+        <div>
+
+            <h1 onclick="show(event)">Heading 2</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id ea nihil ducimus tempore?</p>
+
+        </div>
+        <div>
+
+            <h1 onclick="show(event)">Heading 3</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id ea nihil ducimus tempore?</p>
+
+        </div>
+        <div>
+
+            <h1 onclick="show(event)">Heading 4</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id ea nihil ducimus tempore?</p>
+
+        </div>
+
+        <script>
+
+            function show(event) {
+
+                var paragraphs = document.getElementsByTagName('p');
+                for (i = 0; i < paragraphs.length; i++) {
+                    paragraphs[i].style.display = 'none';
+                }
+                event.target.nextElementSibling.style.display = 'block'
+
+            }
+
+
+
+        </script>
+
+</body>
+
+</html>

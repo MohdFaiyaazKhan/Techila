@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <form name="form">
+                <h1>Techila Global Services</h1><br><br>
+
+                <label class="label">Name: </label><br>
+
+                <input type="text" placeholder="Enter your name" id="name" class="input" name="name" ><br>
+
+                <label class="alert" id="nameAlert" style="display: none; color: red;">* Name is required</label><br>
+
+
+
+                <label class="label">E-mail: </label><br>
+
+                <input type="text" placeholder="Enter your email" id="mail" class="input" name="email" ><br>
+
+                <label class="alert" id="mailAlert" style="display: none; color: red;">* E-mail is required</label>
+
+                <label id="mailFormatAlert" style="display: none; color: red;">* E-mail is invalid</label><br>
+
+
+
+                <label class="label">Mobile: </label><br>
+
+                <input type="text" placeholder="Enter your mobile number" class="input" id="mobile" name="mobile" ><br>
+
+                <label class="alert" id="mobileAlert" style="display: none; color: red;">* Mobile is required</label>
+
+                <label id="mobileFormatAlert" style="display: none; color: red;">* Mobile Number is invalid</label><br>
+
+
+
+                <label class="label">Amount: </label><br>
+                <input type="number" placeholder="Enter your amount" class="input" id="amount" step="0.01"
+                    value="0.00"><br><br>
+
+                <input id="btn" type="button" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        nameInput = document.getElementById('name');
+        //   console.log(nameInput)
+
+        mailInput = document.getElementById('mail');
+        //   console.log(mailInput)
+
+        mobileInput = document.getElementById('mobile');
+        //   console.log(mobileInput)
+
+        btn = document.getElementById('btn');
+
+
+
+        btn.addEventListener("click", () => {
+
+            if (nameInput.value.trim() === '') {
+                document.getElementById('nameAlert').style.display = 'block'
+            }
+            if (mailInput.value.trim() === '') {
+                document.getElementById('mailAlert').style.display = 'block'
+            }
+            if (mobileInput.value.trim() === '') {
+                document.getElementById('mobileAlert').style.display = 'block'
+            }
+        })
+
+
+
+
+        mailInput.addEventListener('blur', ()=>{
+            if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mailInput.value)){
+
+                document.getElementById('mailFormatAlert').style.display = 'none'
+            }
+            else{
+                document.getElementById('mailFormatAlert').style.display = 'block'
+            }
+
+      
+            if(mailInput.value === ''){
+                document.getElementById('mailAlert').style.display = 'block'
+                document.getElementById('mailFormatAlert').style.display = 'none'
+
+            }
+            else{
+                document.getElementById('mailAlert').style.display = 'none'
+            }
+        
+
+
+        })
+
+
+
+        mobileInput.addEventListener('blur', ()=>{
+            if(/^(0|91)?[6-9][0-9]{9}$/.test(mobileInput.value)){
+                
+                document.getElementById('mobileFormatAlert').style.display = 'none'
+            }
+            else{
+                document.getElementById('mobileFormatAlert').style.display = 'block'
+            }
+
+            
+            if(mobileInput.value === ''){
+                document.getElementById('mobileAlert').style.display = 'block'
+                document.getElementById('mobileFormatAlert').style.display = 'none'
+
+            }
+            else{
+                document.getElementById('mobileAlert').style.display = 'none'
+            }
+        
+
+        })
+
+
+
+        nameInput.addEventListener('blur', ()=>{
+            if(nameInput.value === ''){
+                document.getElementById('nameAlert').style.display = 'block'
+            }
+            else{
+                document.getElementById('nameAlert').style.display = 'none'
+            }
+        })
+
+
+
+
+        
+
+
+    </script>
+</body>
+
+</html>
