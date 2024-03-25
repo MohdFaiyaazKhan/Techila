@@ -4,7 +4,7 @@
 }
 
 .content{
-    background-color: #C197D2;
+    background-color: #4297A0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -13,7 +13,7 @@
 }
 
 .space{
-    background-color: #C197D2;
+    background-color: #4297A0;
     width: 50vw;
     height: 70vh;
     display: flex;
@@ -24,7 +24,7 @@
 }
 
 .list{
-    background-color: #613659;
+    background-color: #F4EAE6;
     width: 50%;
     padding: 5%;
     border-radius: 10px;
@@ -35,19 +35,19 @@
 .heading{
     display: flex;
     justify-content: space-between;
-    color: #D3B1C2;
+    color: #2F5061;
 }
 
 .desc{
     margin-top: 5%;
     display: none;
-    color: #D3B1C2;
+    color: #2F5061;
 }
 
 button{
     margin: 8% 0  0 90%;
     padding: 4%;
-    background-color: #211522;
-    color: #D3B1C2;
+    background-color: #E57F84;
+    color: #2F5061;
     border-radius: 25%;
 }
