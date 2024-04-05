@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 18</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1{
+    margin: 1em;
+}
+
+.table{
+    border: 1px solid;
+    padding: 1em;
+}
+
+input{
+    padding: 1em;
+}
+
+.result{
+    padding: 1em;
+    margin: 1em 0 0 66em;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>(A*C)+D+(B*E)</h1>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                </tr>
+
+
+
+            </table>
+
+            <input id="btn" class="result" type="button" value="Result: &nbsp;&nbsp;">
+        </div>
+    </div>
+
+
+    <script>
+    as = document.getElementsByClassName('a');
+    bs = document.getElementsByClassName('b');
+    cs = document.getElementsByClassName('c');
+    ds = document.getElementsByClassName('d');
+    es = document.getElementsByClassName('e');
+
+
+
+var sumA = 0;
+var sumB = 0;
+var sumC = 0;
+var sumD = 0;
+var sumE = 0;
+
+
+function calc(e){
+    sumA = 0;
+    sumB = 0;
+    sumC = 0;
+    sumD = 0;
+    sumE = 0;
+
+
+
+    if(isNaN(e.value)){
+        e.value = '';
+        console.log(e.value);
+
+    }else{
+        for(i=0; i<as.length; i++){
+            sumA = Number(sumA) + Number(as[i].value)
+        }
+    
+        for(i=0; i<bs.length; i++){
+            sumB = Number(sumB) + Number(bs[i].value)
+        }
+    
+        for(i=0; i<cs.length; i++){
+            sumC = Number(sumC) + Number(cs[i].value)
+        }
+    
+        for(i=0; i<ds.length; i++){
+            sumD = Number(sumD) + Number(ds[i].value)
+        }
+    
+        for(i=0; i<es.length; i++){
+            sumE = Number(sumE) + Number(es[i].value)
+        }
+
+    }
+
+
+
+
+    
+
+    rstl = (sumA*sumC)+sumD+(sumB*sumE)
+    document.getElementById('btn').value = `Result: ${rstl}`
+}
+
+
+
+    </script>
+    
+</body>
+</html>

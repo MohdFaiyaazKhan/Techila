@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 19</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1{
+    margin: 1em;
+}
+
+.table{
+    border: 1px solid;
+    padding: 1em;
+}
+
+th{
+    padding: 1em;
+}
+
+input{
+    padding: 1rem 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result{
+    /* padding-left: 1em; */
+    text-align: center;
+    margin: 1em 0 0 62.5rem;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>(A*C)+D+(B*E)</h1>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                    <th>Result</th>
+                    <th>Percentage</th>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="line" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="percentage" id="percentage" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="line" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="percentage" id="percentage" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="line" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="percentage" id="percentage" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="line" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="percentage" id="percentage" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="line" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="percentage" id="percentage" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="line" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="percentage" id="percentage" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="line" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="percentage" id="percentage" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="line" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="percentage" id="percentage" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="line" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="percentage" id="percentage" type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="calc(this)" class="a" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="b" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="c" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="d" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="e" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="line" type="text" ></td>
+                    <td><input onkeyup="calc(this)" class="percentage" id="percentage" type="text" ></td>
+                </tr>
+
+
+
+
+
+
+            </table>
+
+            <input id="result" class="result" type="text" value="Result: ">
+        </div>
+    </div>
+
+
+    <script>
+        as = document.getElementsByClassName('a');
+bs = document.getElementsByClassName('b');
+cs = document.getElementsByClassName('c');
+ds = document.getElementsByClassName('d');
+es = document.getElementsByClassName('e');
+
+var line = document.getElementsByClassName('line');
+
+var percentage = document.getElementsByClassName('percentage');
+
+
+function calc(e){
+
+    if(isNaN(e.value)){
+        e.value = '';
+    }else{
+        for(i=0; i<10; i++){
+
+            a = Number(as[i].value);
+            b = Number(bs[i].value);
+            c = Number(cs[i].value);
+            d = Number(ds[i].value);
+            e = Number(es[i].value);
+
+            line[i].value = (a*c)+d+(b*e)
+
+            let number = (a*c)+d+(b*e)
+
+            let firstTwoDigits = number.toString().substring(0, 2);
+
+            if(number == '100'){
+                percentage[i].value = '100%'
+            }
+            else{
+            percentage[i].value = `${firstTwoDigits}%`
+            }
+        }
+
+        for(i=0; i<10; i++){
+        if(line[i].value == 0){
+            percentage[i].style.backgroundColor = 'white';
+        }
+        else if(line[i].value < 60){
+            percentage[i].style.backgroundColor = 'red';
+            percentage[i].style.color = 'white';
+        }
+        if(line[i].value >= 60){
+            percentage[i].style.backgroundColor = 'green';
+            percentage[i].style.color = 'white';
+        }
+        if(line[i].value == 100){
+            percentage[i].style.backgroundColor = 'green';
+            percentage[i].style.color = 'white';
+        }
+        }
+
+    }
+
+    sum =0 ;
+    for(i=0; i<10; i++){
+
+        sum+=Number(line[i].value);
+    }
+    document.getElementById('result').value = `Result: ${sum}`
+
+}
+
+function color(){
+    
+    for(i=0; i<10; i++){
+        if(line[i].value == '0'){
+            percentage[i].style.backgroundColor = 'white';
+        }
+        else if(line[i].value < '60'){
+            percentage[i].style.backgroundColor = 'red';
+            percentage[i].style.color = 'white';
+        }
+        if(line[i].value >= '60'){
+            percentage[i].style.backgroundColor = 'green';
+            percentage[i].style.color = 'white';
+        }
+    }
+
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>
